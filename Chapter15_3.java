@@ -19,14 +19,12 @@
  *********************************************************************************************************************/
 
 // IMPORTS of needed tools and plug-ins
-import javafx.animation.RotateTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.*;
 import javafx.stage.Stage;
 import javafx.util.*;
 import javafx.scene.shape.*;
