@@ -25,6 +25,7 @@ import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
 import javafx.util.*;
@@ -46,8 +47,9 @@ public class Chapter15_3 extends Application {
         // Create the Pane
         Pane pane = new Pane();
 
-        // Create the Rectangle object
+        // Create the Rectangle object and make it blue
         Rectangle rectangle = new Rectangle(150, 200, 150, 100);
+        rectangle.setFill(Color.BLUE);
 
         // Add the Rectangle to the Pane
         pane.getChildren().add(rectangle);
