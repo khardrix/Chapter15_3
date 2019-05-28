@@ -28,7 +28,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
 import javafx.util.*;
-import java.awt.*;
+import javafx.scene.shape.*;
 
 
 public class Chapter15_3 extends Application {
@@ -43,13 +43,31 @@ public class Chapter15_3 extends Application {
 
     public void start(Stage primaryStage){
 
+        // Create the Pane
         Pane pane = new Pane();
 
+        // Create the Rectangle object
         Rectangle rectangle = new Rectangle(150, 200, 150, 100);
 
+        // Add the Rectangle to the Pane
         pane.getChildren().add(rectangle);
 
+        // Create the Scene, set the Title of the Scene, Set the Scene to the Stage, Show the Stage
+        Scene scene = new Scene(pane, 500, 500);
+        primaryStage.setTitle("Chapter 15, Problem 3: Size Changing Rectangle");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        // Create the ScaleTransition object
         ScaleTransition st = new ScaleTransition(Duration.millis(1000), rectangle);
+
+        // Set the CycleCount to INDEFINITE, Set AutoReverse to True, Set the X-value to multiply by 2,
+            // Set the Y-value to multiply by 3 and Play the ScaleTransition object
+        st.setCycleCount(Timeline.INDEFINITE);
+        st.setAutoReverse(true);
+        st.setByX(2);
+        st.setByY(3);
+        st.play();
     }
 
     public void play(){
